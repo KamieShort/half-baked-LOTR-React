@@ -7,7 +7,7 @@ export default function Books() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchBooks();
-
+      console.log(data);
       setBooks(data);
     };
     fetchData();
@@ -17,7 +17,7 @@ export default function Books() {
     <div>
       <h2>Books</h2>
       {books.map((book) => (
-        <p key={book.title}>{book.title}</p>
+        <p key={book.id}>{book.title}</p>
       ))}
     </div>
   );

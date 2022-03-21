@@ -8,6 +8,7 @@ export default function Characters() {
     const fetchData = async () => {
       const data = await fetchCharacters();
       setCharacters(data);
+    
     };
     fetchData();
   }, []);
