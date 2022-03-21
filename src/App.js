@@ -2,6 +2,7 @@ import './App.css';
 
 import Books from './views/Books/Books';
 import Header from './components/Header/Header';
+import Films from './views/Films/Films';
 import Home from './views/Home/Home';
 import Characters from './views/Characters/Characters';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -18,9 +19,9 @@ export default function App() {
           <Route exact path="/books">
             <Books />
           </Route>
-          {/* <Route exact path="/films">
+          <Route exact path="/films">
             <Films />
-          </Route> */}
+          </Route>
           <Route exact path="/characters">
             <Characters />
           </Route>

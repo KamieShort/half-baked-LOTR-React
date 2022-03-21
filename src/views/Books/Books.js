@@ -7,7 +7,7 @@ export default function Books() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchBooks();
-      console.log(data);
+
       setBooks(data);
     };
     fetchData();

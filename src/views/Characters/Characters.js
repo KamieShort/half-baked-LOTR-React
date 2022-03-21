@@ -4,19 +4,24 @@ import { fetchCharacters } from '../../services/fetchcharacters';
 
 export default function Characters() {
   const [characters, setCharacters] = useState([]);
+  const [race, setRace] = useState('All');
+  const [query, setQuery] = useState('');
+
   useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetchCharacters();
-      console.log(data);
-      setCharacters(data);
+    const fetchData2 = async () => {
+      const resp = await fetchCharacters(race, query);
+      console.log(resp);
+      setCharacters(resp);
     };
-    fetchData();
-  }, []);
+    fetchData2();
+  }, [race, query]);
   return (
     <div>
       <h2>Characters</h2>
       {characters.map((character) => (
-        <p key={character.id}>{character.name}</p>
+        <div key={character.id} {...character}>
+          <p>{character.name}</p>
+        </div>
       ))}
     </div>
   );
