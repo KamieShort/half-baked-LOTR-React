@@ -12,13 +12,19 @@ export default function Header() {
           </NavLink>
         </li>
         <li>
-          <NavLink exact to="Films"></NavLink>
+          <NavLink exact to="Films">
+            Films
+          </NavLink>
         </li>
         <li>
-          <NavLink exact to="Characters"></NavLink>
+          <NavLink exact to="Characters">
+            Characters
+          </NavLink>
         </li>
         <li>
-          <NavLink exact to="Books"></NavLink>
+          <NavLink exact to="Books">
+            Books
+          </NavLink>
         </li>
       </ul>
     </div>
