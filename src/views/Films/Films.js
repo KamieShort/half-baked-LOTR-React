@@ -9,7 +9,7 @@ export default function Films() {
   useEffect(() => {
     const fetchData3 = async () => {
       const data = await fetchFilms();
-      console.log(data);
+
       setFilms(data);
     };
     fetchData3();
