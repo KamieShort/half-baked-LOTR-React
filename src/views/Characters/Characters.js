@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import DropDownRace from '../../components/DropDownRace/DropDownRace';
+import './Characters.css';
 
 import { fetchCharacters } from '../../services/fetchcharacters';
 
@@ -19,7 +20,7 @@ export default function Characters() {
   }, [race, query]);
 
   return (
-    <div>
+    <div className="characters">
       <h2>Characters</h2>
       <DropDownRace race={race} setRace={setRace} />
       {characters.map((character) => (

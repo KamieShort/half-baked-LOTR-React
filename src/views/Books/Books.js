@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchBooks } from '../../services/fetchbooks';
+import './Books.css';
 
 export default function Books() {
   const [books, setBooks] = useState([]);
@@ -14,7 +15,7 @@ export default function Books() {
   }, []);
 
   return (
-    <div>
+    <div className="books">
       <h2>Books</h2>
       {books.map((book) => (
         <p key={book.id}>{book.title}</p>

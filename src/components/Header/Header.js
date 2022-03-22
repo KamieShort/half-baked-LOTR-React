@@ -4,7 +4,7 @@ import './Header.css';
 
 export default function Header() {
   return (
-    <div className="Header">
+    <div className="header">
       <ul>
         <li>
           <NavLink exact to="/">
