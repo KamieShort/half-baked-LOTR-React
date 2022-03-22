@@ -6,8 +6,8 @@ import { fetchCharacters } from '../../services/fetchcharacters';
 export default function Characters() {
   const [characters, setCharacters] = useState([]);
   const [race, setRace] = useState('All');
-  const [query, setQuery] = useState('');
-  const [selectedRace, setSelectedRace] = useState('All');
+  const query = '';
+  // const [selectedRace, setSelectedRace] = useState('All');
 
   useEffect(() => {
     const fetchData2 = async () => {
@@ -18,15 +18,12 @@ export default function Characters() {
     fetchData2();
   }, [race, query]);
 
-  const filterRace = () => {
-    return race.filter((rac) => rac.character === race || race === 'All');
-  };
   return (
     <div>
       <h2>Characters</h2>
-      <DropDownRace selectedRace={selectedRace} setSelectedRace={setSelectedRace} />
+      <DropDownRace race={race} setRace={setRace} />
       {characters.map((character) => (
-        <div key={character.id} {...character} setRace={setRace} setQuery={setQuery}>
+        <div key={character.id} {...character}>
           <p>{character.name}</p>
         </div>
       ))}

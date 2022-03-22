@@ -20,3 +20,15 @@ export async function fetchCharacters(race, query = '') {
   const data = await resp.json();
   return data;
 }
+
+// export default function filterCharacter(race) {
+//   const params = new URLSearchParams();
+
+//   if (race !== 'All') {
+//     urlParams.set('race', race);
+//   }
+
+//   return (
+//     <div>fetchcharacters</div>
+//   )
+// }
